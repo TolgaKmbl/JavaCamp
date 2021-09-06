@@ -1,0 +1,31 @@
+package intro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String internetSubeButonu = "Ýnternet Þubesi";
+		double dolarDun = 7.69;
+		double dolarBugun = 8.18;
+		int vade = 36;
+		boolean dustuMu = false;
+		System.out.println(dustuMu);
+		
+		if (dolarBugun > dolarDun) {
+			dustuMu = true;
+		} else if (dolarBugun == dolarDun) {
+			System.out.println("Eþit");
+		}
+		else {
+			dustuMu = false;
+		}
+		
+		System.out.println("Hello world");
+		System.out.println(internetSubeButonu);
+		System.out.println(dolarDun);
+		System.out.println(vade);
+		System.out.println(dustuMu);
+
+	}
+
+}

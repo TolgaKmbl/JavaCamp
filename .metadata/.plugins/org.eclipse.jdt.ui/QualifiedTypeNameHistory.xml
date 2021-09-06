@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="oopIntro.ProductManager"/>
+    <fullyQualifiedTypeName name="oopIntro.Product"/>
+    <fullyQualifiedTypeName name="oopIntro.Course"/>
+    <fullyQualifiedTypeName name="oopIntro.CourseManager"/>
+    <fullyQualifiedTypeName name="oopIntro.Category"/>
+    <fullyQualifiedTypeName name="inheritance.IndividualCustomer"/>
+    <fullyQualifiedTypeName name="inheritance.CorporateCustomer"/>
+    <fullyQualifiedTypeName name="inheritance.CustomerManager"/>
+    <fullyQualifiedTypeName name="inheritance.Customer"/>
+    <fullyQualifiedTypeName name="inheritance.SendikaCustomer"/>
+    <fullyQualifiedTypeName name="inheritance2.LogManager"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="inheritance2.Logger"/>
+    <fullyQualifiedTypeName name="inheritance2.FileLogger"/>
+    <fullyQualifiedTypeName name="inheritance2.DatabaseLogger"/>
+    <fullyQualifiedTypeName name="inheritance2.CustomerManager"/>
+    <fullyQualifiedTypeName name="inheritance2.EmailLogger"/>
+    <fullyQualifiedTypeName name="interfaces.CustomerManager"/>
+    <fullyQualifiedTypeName name="interfaces.Customer"/>
+    <fullyQualifiedTypeName name="interfaces.FileLogger"/>
+    <fullyQualifiedTypeName name="interfaces.SmsLogger"/>
+    <fullyQualifiedTypeName name="interfaces.EmailLogger"/>
+    <fullyQualifiedTypeName name="interfaces.DatabaseLogger"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.entities.abstracts.Entity"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.business.abstracts.ProductService"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.business.concretes.ProductManager"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.dataAccess.concretes.HibernateProductDao"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.entities.concretes.Product"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.dataAccess.abstracts.ProductDao"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.dataAccess.concretes.AbcProductDao"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.core.LoggerService"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.jLogger.JLoggerManager"/>
+    <fullyQualifiedTypeName name="nLayeredDemo.core.JLoggerManagerAdapter"/>
+    <fullyQualifiedTypeName name="tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy"/>
+</qualifiedTypeNameHistroy>

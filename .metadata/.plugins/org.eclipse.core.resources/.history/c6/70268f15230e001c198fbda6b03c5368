@@ -1,0 +1,6 @@
+
+public class InstructorManager {
+	public void open(Instructor instructor) {
+		System.out.println(instructor.getInstructorNumber() + " numaralý eðitmen " +  instructor.getFirstName() + " " + instructor.getCoursesGiven() + " kursunu vermeye baþladý!");
+	}
+}

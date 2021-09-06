@@ -1,0 +1,18 @@
+
+public class Instructor extends User {
+	private String instructorNumber;
+	private String nameOfCourseGiven;
+	
+	public String getInstructorNumber() {
+		return instructorNumber;
+	}
+	public void setInstructorNumber(String instructorNumber) {
+		this.instructorNumber = instructorNumber;
+	}
+	public String getNameOfCourseGiven() {
+		return nameOfCourseGiven;
+	}
+	public void setNameOfCourseGiven(String nameOfCourseGiven) {
+		this.nameOfCourseGiven = nameOfCourseGiven;
+	}
+}

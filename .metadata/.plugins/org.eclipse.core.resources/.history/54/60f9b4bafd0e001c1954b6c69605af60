@@ -1,0 +1,20 @@
+package CoffeeShop;
+
+
+import CoffeeShop.Abstract.BaseCustomerManager;
+import CoffeeShop.Adapters.MernisServiceAdapter;
+import CoffeeShop.Concrate.StarbucksCustomerManager;
+import CoffeeShop.Entities.Customer;
+import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Customer customer1 = new Customer(1,"Tolga","Kumbul",1992,"123456789");
+		BaseCustomerManager customerManager =new StarbucksCustomerManager(new MernisServiceAdapter());		
+		customerManager.save(customer1);
+		
+
+	}
+
+}

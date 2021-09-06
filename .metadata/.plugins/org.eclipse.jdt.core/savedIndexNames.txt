@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+C:\Users\tolga\Documents\javakamp\.metadata\.plugins\org.eclipse.jdt.core
+3188870910.index
+380197650.index
+435225591.index
+1662216653.index
+2727696444.index
+2633159067.index
+278804527.index
+2299004338.index
+858178207.index
+721329822.index
+1427196101.index
+3274422349.index
+505667811.index
+2052462106.index

@@ -18,7 +18,7 @@ public void save(Customer customer) {
 	super.save(customer);
 	}
 	else {
-		System.out.println("Invaild Person !");
+		System.out.println("Invalid Person !");
 	}
 }
 

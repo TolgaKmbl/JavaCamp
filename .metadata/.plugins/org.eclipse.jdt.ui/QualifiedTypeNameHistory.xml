@@ -39,4 +39,8 @@
     <fullyQualifiedTypeName name="nLayeredDemo.jLogger.JLoggerManager"/>
     <fullyQualifiedTypeName name="nLayeredDemo.core.JLoggerManagerAdapter"/>
     <fullyQualifiedTypeName name="tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy"/>
+    <fullyQualifiedTypeName name="CoffeeShop.Concrate.NeroCustomerManager"/>
+    <fullyQualifiedTypeName name="gameproject.Abstract.SpecialOfferService"/>
+    <fullyQualifiedTypeName name="gameproject.Concrate.SpecialOfferManager"/>
+    <fullyQualifiedTypeName name="gameproject.Entities.SpecialOffer"/>
 </qualifiedTypeNameHistroy>

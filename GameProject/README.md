@@ -1,5 +1,8 @@
 # Game Project with Mernis
 
+###### Requirements
+- Java SE-1.8
+
 ### Testings
 - Registering with a valid ID.
 - Creating a game instance.

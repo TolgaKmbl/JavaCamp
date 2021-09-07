@@ -1,4 +1,4 @@
-package CoffeeShop.Concrate;
+package CoffeeShop.Concrete;
 
 import CoffeeShop.Abstract.BaseCustomerManager;
 

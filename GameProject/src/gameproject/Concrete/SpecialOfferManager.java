@@ -1,4 +1,4 @@
-package gameproject.Concrate;
+package gameproject.Concrete;
 
 import gameproject.Abstract.SpecialOfferService;
 import gameproject.Entities.SpecialOffer;

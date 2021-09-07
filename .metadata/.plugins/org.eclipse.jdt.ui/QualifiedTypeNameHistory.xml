@@ -43,4 +43,10 @@
     <fullyQualifiedTypeName name="gameproject.Abstract.SpecialOfferService"/>
     <fullyQualifiedTypeName name="gameproject.Concrate.SpecialOfferManager"/>
     <fullyQualifiedTypeName name="gameproject.Entities.SpecialOffer"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 </qualifiedTypeNameHistroy>

@@ -1,9 +1,9 @@
 package gameproject;
 
 import gameproject.Adapter.MernisServiceAdapter;
-import gameproject.Concrate.GameMarketManager;
-import gameproject.Concrate.MemberManager;
-import gameproject.Concrate.SpecialOfferManager;
+import gameproject.Concrete.GameMarketManager;
+import gameproject.Concrete.MemberManager;
+import gameproject.Concrete.SpecialOfferManager;
 import gameproject.Entities.Game;
 import gameproject.Entities.Member;
 import gameproject.Entities.SpecialOffer;

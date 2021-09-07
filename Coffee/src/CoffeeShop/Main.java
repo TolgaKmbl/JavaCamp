@@ -3,8 +3,8 @@ package CoffeeShop;
 
 import CoffeeShop.Abstract.BaseCustomerManager;
 import CoffeeShop.Adapters.MernisServiceAdapter;
-import CoffeeShop.Concrate.NeroCustomerManager;
-import CoffeeShop.Concrate.StarbucksCustomerManager;
+import CoffeeShop.Concrete.NeroCustomerManager;
+import CoffeeShop.Concrete.StarbucksCustomerManager;
 import CoffeeShop.Entities.Customer;
 import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
 

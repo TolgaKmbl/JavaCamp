@@ -37,7 +37,7 @@ public class EmployerManager implements EmployerService {
 
 	@Override
 	public DataResult<List<Employer>> getAll() {
-		return new SuccessDataResult<List<Employer>>(this.employerDao.findAll(), "Employers succesfully returned.");
+		return new SuccessDataResult<List<Employer>>(this.employerDao.findAll(), "Employers are succesfully returned.");
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class EmployerManager implements EmployerService {
 				&& hrmsPersonnelVerificationService.isRealEmployer(employer) == true) {			
 			mailList.add(employer.getEmail());
 			this.employerDao.save(employer);
-			return new SuccessResult("Employer added.");
+			return new SuccessResult("Employer is added.");
 		} else 
 		{
 			return new ErrorResult("Something went wrong");

@@ -40,7 +40,7 @@ public class JobSeekerManager implements JobSeekerService{
 
 	@Override
 	public DataResult<List<JobSeeker>> getAll() {
-		return new SuccessDataResult<List<JobSeeker>>(this.jobSeekerDao.findAll(), "Users succesfully returned.");
+		return new SuccessDataResult<List<JobSeeker>>(this.jobSeekerDao.findAll(), "Users are succesfully returned.");
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class JobSeekerManager implements JobSeekerService{
 			identityNumber.add(jobSeeker.getIdentityNumber());
 			mailList.add(jobSeeker.getEmail());
 			this.jobSeekerDao.save(jobSeeker);
-			return new SuccessResult("User added.");	
+			return new SuccessResult("User is added.");	
 		} 
 		else 
 		{

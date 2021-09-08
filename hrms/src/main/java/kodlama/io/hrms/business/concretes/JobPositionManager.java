@@ -26,13 +26,13 @@ public class JobPositionManager implements JobPositionService {
 
 	@Override
 	public DataResult<List<JobPosition>> getAll() {		
-		return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findAll(), "Data succesfully returned.");
+		return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findAll(), "Jobs are succesfully returned.");
 	}
 
 	@Override
 	public Result add(JobPosition jobPosition) {
 		this.jobPositionDao.save(jobPosition);
-		return new SuccessResult("Job added.");
+		return new SuccessResult("Job is added.");
 	}
 
 	

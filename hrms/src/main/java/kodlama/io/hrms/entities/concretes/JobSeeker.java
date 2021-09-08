@@ -1,5 +1,6 @@
 package kodlama.io.hrms.entities.concretes;
 
+
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -29,5 +30,5 @@ public class JobSeeker extends User{
 	private String identityNumber;
 	
 	@Column(name="birth_year")
-	private LocalDate birthYear;
+	private String birthYear;
 }

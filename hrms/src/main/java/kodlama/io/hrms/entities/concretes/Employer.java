@@ -27,7 +27,4 @@ public class Employer extends User {
 	
 	@Column(name="phone")
 	private String phone;
-	
-	@Column(name="email")
-	private String email;
 }

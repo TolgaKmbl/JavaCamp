@@ -1,14 +1,15 @@
 package kodlama.io.hrms.business.concretes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kodlama.io.hrms.business.abstracts.JobSeekerService;
-import kodlama.io.hrms.core.adapters.EmailVerificationService;
-import kodlama.io.hrms.core.adapters.UserVerificationService;
+import kodlama.io.hrms.core.verification.abstracts.MailCheckService;
+import kodlama.io.hrms.core.verification.abstracts.MernisCheckService;
+import kodlama.io.hrms.core.verification.abstracts.VerificationCodeService;
+import kodlama.io.hrms.core.utilities.business.BusinessRules;
 import kodlama.io.hrms.core.utilities.results.DataResult;
 import kodlama.io.hrms.core.utilities.results.ErrorResult;
 import kodlama.io.hrms.core.utilities.results.Result;
@@ -19,47 +20,75 @@ import kodlama.io.hrms.entities.concretes.JobSeeker;
 
 @Service
 public class JobSeekerManager implements JobSeekerService{
-	
-	List<String> mailList = new ArrayList<String>();
-	List<String> identityNumber = new ArrayList<String>();
-	
+
 	private JobSeekerDao jobSeekerDao;
-	private UserVerificationService userVerificationService;
-	private EmailVerificationService emailVerificationService;
-	
+	private MernisCheckService mernisCheckService;
+	private VerificationCodeService verificationCodeService;
+	private MailCheckService mailCheckService;
 	@Autowired
-	public JobSeekerManager(JobSeekerDao jobSeekerDao, 
-			UserVerificationService userVerificationService, 
-			EmailVerificationService emailVerificationService) 
-	{
+	public JobSeekerManager(JobSeekerDao jobSeekerDao, MernisCheckService mernisCheckService,
+			VerificationCodeService verificationCodeService,MailCheckService mailCheckService) {
 		super();
 		this.jobSeekerDao = jobSeekerDao;
-		this.userVerificationService = userVerificationService;
-		this.emailVerificationService = emailVerificationService;
+		this.mernisCheckService = mernisCheckService;
+		this.verificationCodeService = verificationCodeService;
+		this.mailCheckService=mailCheckService;
 	}
 
 	@Override
 	public DataResult<List<JobSeeker>> getAll() {
-		return new SuccessDataResult<List<JobSeeker>>(this.jobSeekerDao.findAll(), "Users are succesfully returned.");
+		// TODO Auto-generated method stub
+	  
+		return new SuccessDataResult<List<JobSeeker>>
+		(this.jobSeekerDao.findAll(),"job seeker listed");	
 	}
 
 	@Override
-	public Result add(JobSeeker jobSeeker) {	
-		if(userVerificationService.isRealPerson(jobSeeker)  == true 
-				&& emailVerificationService.isRealEmail(jobSeeker) == true
-				&& mailList.contains(jobSeeker.getEmail())==false
-				&& identityNumber.contains(jobSeeker.getIdentityNumber())==false) 
-		{ 
-			identityNumber.add(jobSeeker.getIdentityNumber());
-			mailList.add(jobSeeker.getEmail());
-			this.jobSeekerDao.save(jobSeeker);
-			return new SuccessResult("User is added.");	
-		} 
-		else 
-		{
-			return new ErrorResult("Something went wrong");
+	public Result add(JobSeeker jobSeeker) {
+		
+		Result result=BusinessRules.Run(NullControl(jobSeeker),
+				IdentityControl(jobSeeker.getNational_identity()));
+		if(result!=null) {
+			return result;
 		}
-				
+		else if(!mernisCheckService.checkIfRealPerson(jobSeeker)) {
+			return new ErrorResult("hey men! are you kidding me? you are fake.");
+		}
+		//else if(!verificationCodeService.sendEmail(jobSeeker)) {
+		//	return new ErrorResult("verify your email address and then come back.");
+		//}
+		//else if(!mailCheckService.checkEmail(jobSeeker.getEmail())) {
+		//	return new ErrorResult("Email is not valid.");
+		//}
+		
+			jobSeekerDao.save(jobSeeker);
+			return new SuccessResult("Job Seeker Added.");
+		
+		
 	}
+	public Result NullControl(JobSeeker jobSeeker) {
+		if(jobSeeker.getBirth_date()==null
+				||jobSeeker.getLast_name()==null
+				||jobSeeker.getUser().getId()==0
+				||jobSeeker.getFirst_name()==null
+				
+				) {
+			return new ErrorResult("please fill all the fields.");
+		}
+		    return new SuccessResult();
+		
+	}
+	public Result IdentityControl(String identity) {
+		List<JobSeeker> results=jobSeekerDao.findAll();
+		for(JobSeeker result:results) {
+			if(result.getNational_identity().equals(identity)) {
+				return new ErrorResult("User is already exist!");
+			}
+		}
+		
+		return new SuccessResult();
+		
+	}
+
 
 }

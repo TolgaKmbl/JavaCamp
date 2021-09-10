@@ -65,7 +65,7 @@ public class JobSeeker  {
    @OneToMany(mappedBy="jobseeker")
    private List<CoverLetter> coverletters;
    
-   @OneToOne()
+   @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(name="user_id")
    private User user;
    

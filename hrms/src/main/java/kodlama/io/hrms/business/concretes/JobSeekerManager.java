@@ -52,7 +52,7 @@ public class JobSeekerManager implements JobSeekerService{
 			return result;
 		}
 		else if(!mernisCheckService.checkIfRealPerson(jobSeeker)) {
-			return new ErrorResult("hey men! are you kidding me? you are fake.");
+			return new ErrorResult("No user");
 		}
 		//else if(!verificationCodeService.sendEmail(jobSeeker)) {
 		//	return new ErrorResult("verify your email address and then come back.");
@@ -69,7 +69,6 @@ public class JobSeekerManager implements JobSeekerService{
 	public Result NullControl(JobSeeker jobSeeker) {
 		if(jobSeeker.getBirth_date()==null
 				||jobSeeker.getLast_name()==null
-				||jobSeeker.getUser().getId()==0
 				||jobSeeker.getFirst_name()==null
 				
 				) {

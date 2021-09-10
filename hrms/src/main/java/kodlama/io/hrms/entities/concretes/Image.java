@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,7 +41,7 @@ public class Image {
 	@Column(name="public_id")
 	private String public_id;
 	
-	 @OneToOne()
+	 @OneToOne(cascade = CascadeType.ALL)
 	 @JoinColumn(name="user_id")
 	 private User user;
 }

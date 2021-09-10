@@ -1,5 +1,6 @@
 package kodlama.io.hrms.entities.concretes;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,7 +34,7 @@ public class Verification {
 	  @Column(name="system_verification")
 	  private boolean systemVerification;
 	  
-	  @OneToOne()
+	  @OneToOne(cascade = CascadeType.ALL)
 	  @JoinColumn(name="user_id")
 	  private User user;
 }

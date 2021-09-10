@@ -1,7 +1,20 @@
-import React from 'react'
-import { Button, Menu, Container } from 'semantic-ui-react'
+import React, { useState } from 'react'
+import { Menu, Container } from 'semantic-ui-react'
+import SignedIn from './SignedIn'
+import SignedOut from './SignedOut'
 
 export default function Navi() {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(true)
+
+    const handleSignOut = () => {
+        setIsLoggedIn(false)
+    }
+
+    const handleSignIn = () => {
+        setIsLoggedIn(true)
+    }
+
     return (
         <div>
             <Menu inverted fixed="top">
@@ -13,13 +26,9 @@ export default function Navi() {
                         name='private messages'
                     />
                     <Menu.Menu position='right'>
-                        <Menu.Item>
-                            <Button.Group>
-                                <Button>Sign In</Button>
-                                <Button.Or text='&amp;'/>
-                                <Button positive>Log In</Button>
-                            </Button.Group>
-                        </Menu.Item>
+                        {
+                            isLoggedIn ? <SignedIn handleSignOut={handleSignOut}/> : <SignedOut handleSignIn={handleSignIn}/>
+                        }                    
                     </Menu.Menu>
                 </Container>
             </Menu>

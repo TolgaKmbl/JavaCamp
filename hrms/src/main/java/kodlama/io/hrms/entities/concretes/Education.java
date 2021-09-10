@@ -2,6 +2,7 @@ package kodlama.io.hrms.entities.concretes;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -47,7 +48,7 @@ public class Education {
        private Date graduationDate;
        
 	  // @JsonIgnore
-       @ManyToOne()
+       @ManyToOne(cascade = CascadeType.ALL)
        @JoinColumn(name="jobseeker_id")
        JobSeeker jobseeker;
 }

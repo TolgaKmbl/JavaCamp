@@ -1,5 +1,6 @@
 package kodlama.io.hrms.entities.concretes;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,7 +31,7 @@ public class SystemStaff {
 	  @Column(name="last_name")
 	  private String lastName;
 	  
-	  @OneToOne()
+	  @OneToOne(cascade = CascadeType.ALL)
 	  @JoinColumn(name="user_id")
 	  private User user;
 }

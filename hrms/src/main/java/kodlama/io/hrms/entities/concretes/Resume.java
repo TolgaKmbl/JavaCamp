@@ -1,5 +1,6 @@
 package kodlama.io.hrms.entities.concretes;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,7 +27,7 @@ public class Resume {
 	private int id;
 	
 	
-	@OneToOne()
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="jobseeker_id")
     private JobSeeker jobseeker;
 	

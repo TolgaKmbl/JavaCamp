@@ -2,6 +2,7 @@ package kodlama.io.hrms.entities.concretes;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,11 +39,11 @@ public class Experience {
 	@Column(name="end_date")
 	private Date endDate;
 	
-	@ManyToOne()
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="job_id")
 	Job job;
 	
-	@ManyToOne()
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="jobseeker_id")
 	JobSeeker jobseeker;
 	 

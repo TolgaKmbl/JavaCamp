@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="kodlama.io.hrms.entities.concretes.JobSeeker"/>
-    <fullyQualifiedTypeName name="kodlama.io.hrms.business.abstracts.JobSeekerService"/>
     <fullyQualifiedTypeName name="kodlama.io.hrms.dataAccess.abstracts.JobSeekerDao"/>
     <fullyQualifiedTypeName name="kodlama.io.hrms.business.abstracts.EmployerService"/>
     <fullyQualifiedTypeName name="kodlama.io.hrms.dataAccess.abstracts.EmployerDao"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="kodlama.io.hrms.core.utilities.results.Result"/>
     <fullyQualifiedTypeName name="kodlama.io.hrms.entities.concretes.Verification"/>
     <fullyQualifiedTypeName name="kodlama.io.hrms.core.utilities.business.BusinessRules"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 </qualifiedTypeNameHistroy>

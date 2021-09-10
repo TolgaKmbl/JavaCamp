@@ -2,6 +2,7 @@ package kodlama.io.hrms.entities.concretes;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -43,15 +44,15 @@ public class JobAdvertisement {
    @Column(name="release_date")
 	private Date releaseDate;
    
-   @ManyToOne()
+   @ManyToOne(cascade = CascadeType.ALL)
    @JoinColumn(name="job_id")
    Job job;
    
-   @ManyToOne()
+   @ManyToOne(cascade = CascadeType.ALL)
    @JoinColumn(name="city_id")
    City city;
    
-   @ManyToOne()
+   @ManyToOne(cascade = CascadeType.ALL)
    @JoinColumn(name="employer_id")
    Employer employer;
 }

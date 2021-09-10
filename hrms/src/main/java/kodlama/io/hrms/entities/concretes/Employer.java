@@ -2,6 +2,7 @@ package kodlama.io.hrms.entities.concretes;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,20 +30,20 @@ public class Employer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-  private int id;
+	private int id;
 	
 	@Column(name="company_name")
-  private String company_name;
+	private String company_name;
 	
 	@Column(name="website")
-  private String website;
+	private String website;
 	
 	@Column(name="phone")
-  private String phone;
+	private String phone;
 	
-	   @OneToOne()
-	   @JoinColumn(name="user_id")
-	   private User user;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_id")
+    private User user;
 
 	@JsonIgnore
 	@OneToMany(mappedBy="employer")

@@ -1,9 +1,0 @@
-package interfaces;
-
-public class Utils {
-	public void RunLoggers() {
-		for(Logger logs : loggers) {
-			logs.log(customer.getFirstName());
-		}
-	}
-}

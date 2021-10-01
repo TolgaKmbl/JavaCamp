@@ -1,6 +1,0 @@
-
-public class StudentManager {
-	public void join(Student student) {
-		System.out.println(student.getStudentNumber() + " numaralı öğrenci " +  student.getFirstName() + " " + student.coursesTaken() + " kursuna katıldı!");
-	}
-}

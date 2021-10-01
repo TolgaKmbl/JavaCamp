@@ -1,6 +1,0 @@
-
-public class InstructorManager {
-	public void open(Instructor instructor) {
-		System.out.println(instructor.getFirstName() + instructor.getNameOfCourseGiven() + " kursunu vermeye baþladý!");
-	}
-}

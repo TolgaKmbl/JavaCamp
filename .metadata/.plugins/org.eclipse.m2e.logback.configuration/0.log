@@ -8586,3 +8586,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration HrmsApplication ref
 2021-11-10 12:17:55,160 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-11-10 12:17:55,160 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-11-10 12:17:55,160 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\tolga\Documents\javakamp\northwind\src\test\resources
+2021-11-10 13:10:15,413 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

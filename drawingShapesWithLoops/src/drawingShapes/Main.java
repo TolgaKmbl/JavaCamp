@@ -6,7 +6,7 @@ public class Main {
 		drawFilledRectangle(10, 5);
 		drawVoidRectangle(10, 5);
 		drawTriangle(8);
-		drawLeftTriangle(9);
+		drawLeftTriangle(20);
 
 	}
 
@@ -49,7 +49,7 @@ public class Main {
 	}
 
 	static void drawLeftTriangle(int row) {
-		for (int i = 0; i < row; i++) {
+		for (int i = 0; i < row; i+=2) {
 			for (int j = 0; j <= i; j++)
 				System.out.print("*");
 			System.out.println();

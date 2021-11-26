@@ -18,4 +18,10 @@ public class Customer extends JavaUser{
 		this.name = name;
 		this.tckno = tckno;
 	}
+
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", tckno=" + tckno + "]";
+	}	
+	
 }

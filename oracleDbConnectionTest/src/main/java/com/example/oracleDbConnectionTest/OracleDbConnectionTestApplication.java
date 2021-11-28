@@ -27,8 +27,8 @@ public class OracleDbConnectionTestApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		Customer customer1 = customerDao.save(new Customer("emailString", "tolga","12345123"));
-		Customer customer2 = customerDao.save(new Customer("emailString2", "ceren","55123123"));
+		Customer customer1 = customerDao.save(new Customer("emailString", "tolga","12345123", true));
+		Customer customer2 = customerDao.save(new Customer("emailString2", "ceren","55123123", true));
 		
 		System.out.println(customer1);
 		System.out.println(customer2);
